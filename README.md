@@ -47,16 +47,75 @@ Projede genel anlamda 2 bölüm bulunmaktadır.<br>
 
 ## :arrow_forward: Projeden Ekran Görüntüleri
 
-### :triangular_flag_on_post: Veri Seti Paneli
+### :triangular_flag_on_post: Ana Sayfa
 <div align="center">
-  <img src="https://github.com/melihcolak0/DapperKaggle/blob/6a8304952247db2c4cdc1baab89bb2740361d757/ss/screencapture-localhost-7039-Dashboard-Index-2025-08-05-22_55_27.png" alt="image alt">
+  <img src="https://github.com/melihcolak0/CqrsCentalRentACar/blob/bc3981f84807765f0a424dfc9dc6ebc0f6036e38/ss/screencapture-localhost-7100-Default-2025-08-25-21_39_22.png" alt="image alt">
+</div>
+<div align="center">
+  <img src="https://github.com/melihcolak0/CqrsCentalRentACar/blob/bc3981f84807765f0a424dfc9dc6ebc0f6036e38/ss/screencapture-localhost-7100-Default-ListAvailableCars-2025-08-26-13_23_08.png" alt="image alt">
+</div>
+<div align="center">
+  <img src="https://github.com/melihcolak0/CqrsCentalRentACar/blob/bc3981f84807765f0a424dfc9dc6ebc0f6036e38/ss/screencapture-localhost-7100-Default-VehicleRecommendationAssistant-2025-08-26-13_23_52.png" alt="image alt">
 </div>
 
+---
 
+### :triangular_flag_on_post: Yapay Zeka Kullanılan Bölümler
+<div align="center">
+  <img src="https://github.com/melihcolak0/CqrsCentalRentACar/blob/bc3981f84807765f0a424dfc9dc6ebc0f6036e38/ss/Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202025-08-25%20195856.png" alt="image alt">
+</div>
+<div align="center">
+  <img src="https://github.com/melihcolak0/CqrsCentalRentACar/blob/bc3981f84807765f0a424dfc9dc6ebc0f6036e38/ss/Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202025-08-25%20231253.png" alt="image alt">
+</div>
+<div align="center">
+  <img src="https://github.com/melihcolak0/CqrsCentalRentACar/blob/bc3981f84807765f0a424dfc9dc6ebc0f6036e38/ss/localhost_7100_Default.png" alt="image alt">
+</div>
+<div align="center">
+  <img src="https://github.com/melihcolak0/CqrsCentalRentACar/blob/bc3981f84807765f0a424dfc9dc6ebc0f6036e38/ss/Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202025-08-25%20214212.png" alt="image alt">
+</div>
 
+---
 
-
-
-
-
-
+### :triangular_flag_on_post: Admin Paneli
+<div align="center">
+  <img src="https://github.com/melihcolak0/CqrsCentalRentACar/blob/bc3981f84807765f0a424dfc9dc6ebc0f6036e38/ss/screencapture-localhost-7100-Dashboard-Index-2025-08-26-13_18_24.png" alt="image alt">
+</div>
+<div align="center">
+  <img src="https://github.com/melihcolak0/CqrsCentalRentACar/blob/bc3981f84807765f0a424dfc9dc6ebc0f6036e38/ss/screencapture-localhost-7100-About-Index-2025-08-26-12_50_34.png" alt="image alt">
+</div>
+<div align="center">
+  <img src="https://github.com/melihcolak0/CqrsCentalRentACar/blob/bc3981f84807765f0a424dfc9dc6ebc0f6036e38/ss/screencapture-localhost-7100-About-CreateAbout-2025-08-26-12_52_04.png" alt="image alt">
+</div>
+<div align="center">
+  <img src="https://github.com/melihcolak0/CqrsCentalRentACar/blob/bc3981f84807765f0a424dfc9dc6ebc0f6036e38/ss/screencapture-localhost-7100-About-UpdateAbout-4-2025-08-26-12_52_15.png" alt="image alt">
+</div>
+<div align="center">
+  <img src="https://github.com/melihcolak0/CqrsCentalRentACar/blob/bc3981f84807765f0a424dfc9dc6ebc0f6036e38/ss/screencapture-localhost-7100-Booking-Index-2025-08-26-13_08_47.png" alt="image alt">
+</div>
+<div align="center">
+  <img src="https://github.com/melihcolak0/CqrsCentalRentACar/blob/bc3981f84807765f0a424dfc9dc6ebc0f6036e38/ss/screencapture-localhost-7100-Car-Index-2025-08-26-13_09_19.png" alt="image alt">
+</div>
+<div align="center">
+  <img src="https://github.com/melihcolak0/CqrsCentalRentACar/blob/bc3981f84807765f0a424dfc9dc6ebc0f6036e38/ss/screencapture-localhost-7100-Employee-Index-2025-08-26-13_10_15.png" alt="image alt">
+</div>
+<div align="center">
+  <img src="https://github.com/melihcolak0/CqrsCentalRentACar/blob/bc3981f84807765f0a424dfc9dc6ebc0f6036e38/ss/screencapture-localhost-7100-Feature-Index-2025-08-26-13_10_24.png" alt="image alt">
+</div>
+<div align="center">
+  <img src="https://github.com/melihcolak0/CqrsCentalRentACar/blob/bc3981f84807765f0a424dfc9dc6ebc0f6036e38/ss/screencapture-localhost-7100-Location-Index-2025-08-26-13_10_40.png" alt="image alt">
+</div>
+<div align="center">
+  <img src="https://github.com/melihcolak0/CqrsCentalRentACar/blob/bc3981f84807765f0a424dfc9dc6ebc0f6036e38/ss/screencapture-localhost-7100-Service-Index-2025-08-26-13_10_49.png" alt="image alt">
+</div>
+<div align="center">
+  <img src="https://github.com/melihcolak0/CqrsCentalRentACar/blob/bc3981f84807765f0a424dfc9dc6ebc0f6036e38/ss/screencapture-localhost-7100-Slider-Index-2025-08-26-13_10_57.png" alt="image alt">
+</div>
+<div align="center">
+  <img src="https://github.com/melihcolak0/CqrsCentalRentACar/blob/bc3981f84807765f0a424dfc9dc6ebc0f6036e38/ss/screencapture-localhost-7100-Testimonial-Index-2025-08-26-13_11_04.png" alt="image alt">
+</div>
+<div align="center">
+  <img src="https://github.com/melihcolak0/CqrsCentalRentACar/blob/bc3981f84807765f0a424dfc9dc6ebc0f6036e38/ss/screencapture-localhost-7100-Message-Index-2025-08-26-13_17_16.png" alt="image alt">
+</div>
+<div align="center">
+  <img src="https://github.com/melihcolak0/CqrsCentalRentACar/blob/bc3981f84807765f0a424dfc9dc6ebc0f6036e38/ss/screencapture-localhost-7100-AI-ChatBot-2025-08-26-13_26_42.png" alt="image alt">
+</div>
