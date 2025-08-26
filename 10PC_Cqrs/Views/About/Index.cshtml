@@ -1,0 +1,51 @@
+﻿@model List<GetAboutQueryResult>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="content-wrapper">
+    <div class="row">
+        <div class="col-lg-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Hakkında Listesi</h4>        
+                    <p class="card-description">
+                        Hakkında bölümünün ekleme, silme ve güncelleme işlemlerini buradan yapabilirsiniz.
+                    </p>
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>           
+                                    <th class="text-dark" style="font-style: italic; padding-right:40px;">#</th>
+                                    <th class="text-dark" style="font-style: italic;">Açıklama</th>
+                                    <th class="text-dark" style="font-style: italic;">Sil</th>
+                                    <th class="text-dark" style="font-style: italic;">Güncelle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach(var item in Model)
+                                {
+                                    <tr>
+                                        <td>@item.AboutId</td>
+                                        <td>
+                                            @(string.IsNullOrEmpty(item.Description)
+                                                                                    ? ""
+                                                                                    : (item.Description.Length <= 150
+                                                                                    ? item.Description
+                                                                                    : item.Description.Substring(0, 150) + "..."))
+                                        </td>
+                                        <td><a href="/About/DeleteAbout/@item.AboutId" class="btn btn-danger">Sil</a></td>
+                                        <td><a href="/About/UpdateAbout/@item.AboutId" class="btn btn-warning">Güncelle</a></td>                                        
+                                    </tr>
+                                }                                                             
+                            </tbody>
+                        </table>
+                        <br />
+                        <a href="/About/CreateAbout" class="btn btn-primary">Yeni Hakkında Bölümü Ekle</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

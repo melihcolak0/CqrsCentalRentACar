@@ -1,0 +1,50 @@
+﻿@model List<GetLocationQueryResult>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="content-wrapper">
+    <div class="row">
+        <div class="col-lg-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Havalimanları Listesi</h4>
+                    <p class="card-description">
+                        Havalimanlar bölümünü buradan inceleyebilirsiniz.
+                    </p>
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th class="text-dark" style="font-style: italic; padding-right:40px;">#</th>
+                                    <th class="text-dark" style="font-style: italic;">Hava Limanı</th>
+                                    <th class="text-dark" style="font-style: italic;">Şehir</th>
+                                    <th class="text-dark" style="font-style: italic;">IATA Kodu</th>
+                                    <th class="text-dark" style="font-style: italic;">ICAO Kodu</th>
+                                    <th class="text-dark" style="font-style: italic;">Enlem</th>
+                                    <th class="text-dark" style="font-style: italic;">Boylam</th>                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>@item.LocationId</td>
+                                        <td>@item.AirportName</td>
+                                        <td>@item.City</td>
+                                        <td>@item.AreaCode</td>
+                                        <td>@item.AirportCode</td>
+                                        <td>@item.Latitude</td>
+                                        <td>@item.Longitude</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

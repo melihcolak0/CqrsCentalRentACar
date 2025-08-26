@@ -1,0 +1,46 @@
+﻿@model GetBookingByIdQueryResult
+
+@{
+    ViewData["Title"] = "UpdateBooking";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="content-wrapper">
+    <div class="row">
+        <div class="col-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Rezervasyon Güncelleme</h4>
+                    <p class="card-description">
+                        Rezervasyon bölümünün güncelleme işlemlerini buradan gerçekleştirebilirsiniz.
+                    </p>
+                    <form class="forms-sample" method="post">
+                        <input type="hidden" asp-for="BookingId" />
+                        <div class="form-group">
+                            <label>Araç Alış Havalimanı</label>
+                            <input type="text" class="form-control" asp-for="PickUpAirport">
+                        </div>
+                        <div class="form-group">
+                            <label>Araç Teslim Havalimanı</label>
+                            <input type="text" class="form-control" asp-for="DropOffAirport">
+                        </div>
+                        <div class="form-group">
+                            <label>Araç Alış Tarihi</label>
+                            <input type="date" class="form-control" asp-for="PickUpDate">
+                        </div>
+                        <div class="form-group">
+                            <label>Araç Teslim Tarihi</label>
+                            <input type="date" class="form-control" asp-for="DropOffDate">
+                        </div>
+                        <div class="form-group">
+                            <label>Araba</label>
+                            <select asp-for="CarId" asp-items="ViewBag.Cars" class="form-control"></select>
+                        </div>
+                        <button type="submit" class="btn btn-success me-2">Güncelle</button>
+                        <a href="/About/Index" class="btn btn-light">İptal</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

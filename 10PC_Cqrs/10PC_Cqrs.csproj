@@ -1,0 +1,51 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>_10PC_Cqrs</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Kapella-Free-Bootstrap-Admin-Template-master\.DS_Store" />
+    <None Include="wwwroot\Kapella-Free-Bootstrap-Admin-Template-master\template\.DS_Store" />
+    <None Include="wwwroot\Kapella-Free-Bootstrap-Admin-Template-master\template\css\.DS_Store" />
+    <None Include="wwwroot\Kapella-Free-Bootstrap-Admin-Template-master\template\css\maps\.DS_Store" />
+    <None Include="wwwroot\Kapella-Free-Bootstrap-Admin-Template-master\template\fonts\.DS_Store" />
+    <None Include="wwwroot\Kapella-Free-Bootstrap-Admin-Template-master\template\fonts\sourcesanspro\.DS_Store" />
+    <None Include="wwwroot\Kapella-Free-Bootstrap-Admin-Template-master\template\images\.DS_Store" />
+    <None Include="wwwroot\Kapella-Free-Bootstrap-Admin-Template-master\template\images\auth\.DS_Store" />
+    <None Include="wwwroot\Kapella-Free-Bootstrap-Admin-Template-master\template\images\dashboard\.DS_Store" />
+    <None Include="wwwroot\Kapella-Free-Bootstrap-Admin-Template-master\template\images\faces\.DS_Store" />
+    <None Include="wwwroot\Kapella-Free-Bootstrap-Admin-Template-master\template\js\.DS_Store" />
+    <None Include="wwwroot\Kapella-Free-Bootstrap-Admin-Template-master\template\pages\.DS_Store" />
+    <None Include="wwwroot\Kapella-Free-Bootstrap-Admin-Template-master\template\pages\charts\.DS_Store" />
+    <None Include="wwwroot\Kapella-Free-Bootstrap-Admin-Template-master\template\pages\forms\.DS_Store" />
+    <None Include="wwwroot\Kapella-Free-Bootstrap-Admin-Template-master\template\pages\icons\.DS_Store" />
+    <None Include="wwwroot\Kapella-Free-Bootstrap-Admin-Template-master\template\pages\samples\.DS_Store" />
+    <None Include="wwwroot\Kapella-Free-Bootstrap-Admin-Template-master\template\pages\tables\.DS_Store" />
+    <None Include="wwwroot\Kapella-Free-Bootstrap-Admin-Template-master\template\pages\ui-features\.DS_Store" />
+    <None Include="wwwroot\Kapella-Free-Bootstrap-Admin-Template-master\template\scss\.DS_Store" />
+    <None Include="wwwroot\Kapella-Free-Bootstrap-Admin-Template-master\template\scss\components\.DS_Store" />
+    <None Include="wwwroot\Kapella-Free-Bootstrap-Admin-Template-master\template\scss\components\plugin-overrides\.DS_Store" />
+    <None Include="wwwroot\Kapella-Free-Bootstrap-Admin-Template-master\template\scss\mixins\.DS_Store" />
+    <None Include="wwwroot\Kapella-Free-Bootstrap-Admin-Template-master\template\vendors\.DS_Store" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="9.0.0" />
+    <PackageReference Include="NETCore.MailKit" Version="2.1.0" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,184 @@
+﻿@model DashboardViewModel
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int counter = 0;
+}
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
+<div class="content-wrapper">
+    <div class="row">
+        <div class="col-md-12 flex-column d-flex stretch-card">
+            <div class="row">
+                <!-- Benzin -->
+                <div class="col-lg-4 d-flex grid-margin stretch-card">
+                    <div class="card shadow-sm border-0" style="background: linear-gradient(135deg, #ffe29f, #ffa758);">
+                        <div class="card-body d-flex align-items-center">
+                            <i class="fas fa-gas-pump fa-3x text-dark me-4"></i> <!-- ikon siyah -->
+                            <div class="ps-2 flex-grow-1">
+                                <h2 class="text-dark mb-1 fw-bold">@Model.FuelPrices.gasolineTL </h2>
+                                <h5 class="text-dark mb-2">Türkiye Geneli Ortalama Benzin Fiyatı</h5>
+                                <small class="text-dark">Ağustos 2025</small>
+
+                                <!-- Alt progress veya gösterge -->
+                                <div class="progress mt-2" style="height:4px; border-radius:2px;">
+                                    <div class="progress-bar bg-dark" role="progressbar" style="width: 100%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Motorin -->
+                <div class="col-lg-4 d-flex grid-margin stretch-card">
+                    <div class="card shadow-sm border-0" style="background: linear-gradient(135deg, #f56c6c, #ff7f50);">
+                        <div class="card-body d-flex align-items-center">
+                            <i class="fas fa-oil-can fa-3x text-white me-4"></i>
+                            <div class="ps-2 flex-grow-1">
+                                <h2 class="text-white mb-1 fw-bold">@Model.FuelPrices.dieselTL ₺</h2>
+                                <h5 class="text-white mb-2">Türkiye Geneli Ortalama Motorin Fiyatı</h5>
+                                <small class="text-light">Ağustos 2025</small>
+                                <div class="progress mt-2" style="height:4px; border-radius:2px;">
+                                    <div class="progress-bar bg-white" role="progressbar" style="width: 60%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LPG -->
+                <div class="col-lg-4 d-flex grid-margin stretch-card">
+                    <div class="card shadow-sm border-0" style="background: linear-gradient(135deg, #6a89cc, #4a69bd);">
+                        <div class="card-body d-flex align-items-center">
+                            <i class="fas fa-fire-alt fa-3x text-white me-4"></i>
+                            <div class="ps-2 flex-grow-1">
+                                <h2 class="text-white mb-1 fw-bold">@Model.FuelPrices.lpgTL ₺</h2>
+                                <h5 class="text-white mb-2">Türkiye Geneli Ortalama Otogaz Fiyatı</h5>
+                                <small class="text-light">Ağustos 2025</small>
+                                <div class="progress mt-2" style="height:4px; border-radius:2px;">
+                                    <div class="progress-bar bg-white" role="progressbar" style="width: 50%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 d-flex grid-margin stretch-card">
+                        <div class="card w-100">
+                            <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                                <h4 class="card-title mb-4 text-center">Kasa Tiplerine Göre Araç Sayıları</h4>
+                                <div class="w-100" style="max-width:400px;">
+                                    <canvas id="carTypeChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 d-flex grid-margin stretch-card">
+                        <div class="card w-100">
+                            <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                                <h4 class="card-title mb-4 text-center">Markalara Göre Ortalama Fiyat</h4>
+                                <div class="w-100" style="max-width:800px;">
+                                    <canvas id="brandAveragePriceChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 d-flex grid-margin stretch-card">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Son 10 Rezervasyon</h4>                            
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-dark" style="font-style: italic;">#</th>
+                                            <th class="text-dark" style="font-style: italic;">Araba Alış Havalimanı</th>
+                                            <th class="text-dark" style="font-style: italic;">Araba Teslim Havalimanı</th>
+                                            <th class="text-dark" style="font-style: italic;">Araba Alış Tarihi</th>
+                                            <th class="text-dark" style="font-style: italic;">Araba Teslim Tarihi</th>
+                                            <th class="text-dark" style="font-style: italic;">Araba</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model.Last10Bookings)
+                                        {
+                                            counter++;
+                                            <tr>
+                                                <td>@counter</td>
+                                                <td>@item.PickUpAirport</td>
+                                                <td>@item.DropOffAirport</td>
+                                                <td>@item.PickUpDate.ToString("dd MMM yyyy")</td>
+                                                <td>@item.DropOffDate.ToString("dd MMM yyyy")</td>
+                                                <td>@item.CarBrand @item.CarModel</td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+
+<script>
+    var carLabels = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model.CarTypeChart.Labels));
+    var carCounts = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model.CarTypeChart.Counts));
+
+    var ctx = document.getElementById('carTypeChart').getContext('2d');
+    var carTypeChart = new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: carLabels,
+            datasets: [{
+                data: carCounts,
+                backgroundColor: [
+                    '#36A2EB',
+                    '#FF6384',
+                    '#FFCE56',
+                    '#4BC0C0',
+                    '#9966FF',
+                    '#FF9F40',
+                    '#8E44AD'
+                ]
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'bottom'
+                }
+            }
+        }
+    });
+</script>
+
+<script>
+    var ctx = document.getElementById('brandAveragePriceChart').getContext('2d');
+    var chart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: @Html.Raw(Json.Serialize(Model.BrandAveragePriceChart.Labels)),
+            datasets: [{
+                label: 'Ortalama Fiyat (TL)',
+                data: @Html.Raw(Json.Serialize(Model.BrandAveragePriceChart.AveragePrices)),
+                backgroundColor: '#36A2EB'
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: { display: false }
+            }
+        }
+    });
+</script>
+

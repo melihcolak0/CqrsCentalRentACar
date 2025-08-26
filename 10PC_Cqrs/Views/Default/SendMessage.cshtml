@@ -1,0 +1,61 @@
+﻿@model CreateMessageCommand
+
+<div class="container-fluid contact py-5">
+    <div class="container py-5">
+        <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+            <h1 class="display-5 text-capitalize text-primary mb-3">Bize Ulaşın</h1>
+            <p class="mb-0">Müşterilerimizle her zaman yakın ve hızlı bir iletişim kurmayı önemsiyoruz. Sorularınız, rezervasyon talepleriniz veya önerileriniz için bizimle telefon, e-posta veya sosyal medya üzerinden kolayca iletişime geçebilirsiniz. Profesyonel destek ekibimiz, her türlü ihtiyacınıza 7/24 yanıt vermek için hazırdır.</p>
+        </div>
+        <div class="row g-5">
+            <div class="col-xl-12 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="bg-secondary p-5 rounded">
+                    <h4 class="text-primary mb-4">Bize Mesaj Gönderin</h4>
+                    <form method="post" asp-controller="Default" asp-action="SendMessage">
+                        <div class="row g-4">
+                            <div class="col-lg-12 col-xl-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="name" placeholder="Adınız" asp-for="Name">
+                                    <label for="name">Adınız</label>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-xl-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="surname" placeholder="Soyadınız" asp-for="Surname">
+                                    <label for="surname">Soyadınız</label>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-xl-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="phone" placeholder="Telefon Numaranız" asp-for="Phone">
+                                    <label for="phone">Telefon Numaranız</label>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-xl-6">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control" id="email" placeholder="E-Mail Adresiniz" asp-for="Email">
+                                    <label for="email">E-Mail Adresiniz</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="subject" placeholder="Konu" asp-for="Subject">
+                                    <label for="subject">Konu</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <textarea class="form-control" placeholder="Mesajınız" id="message" style="height: 160px" asp-for="MessageDetail"></textarea>
+                                    <label for="message">Mesajınız</label>
+                                </div>
+
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-light w-100 py-3">Mesajı Gönder</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

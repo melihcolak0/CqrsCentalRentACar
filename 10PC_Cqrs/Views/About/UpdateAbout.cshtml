@@ -1,0 +1,38 @@
+﻿@model GetAboutByIdQueryResult
+
+@{
+    ViewData["Title"] = "UpdateAbout";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="content-wrapper">
+    <div class="row">
+        <div class="col-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Hakkında Bölümü Güncelleme</h4>
+                    <p class="card-description">
+                        Hakkında bölümünün güncelleme işlemlerini buradan gerçekleştirebilirsiniz.
+                    </p>
+                    <form class="forms-sample" method="post">
+                        <input type="hidden" asp-for="AboutId"/>
+                        <div class="form-group">
+                            <label>Vizyonumuz</label>
+                            <input type="text" class="form-control" asp-for="Vision">
+                        </div>
+                        <div class="form-group">
+                            <label>Misyonumuz</label>
+                            <input type="text" class="form-control" asp-for="Mision">
+                        </div>
+                        <div class="form-group">
+                            <label>Açıklama</label>
+                            <textarea class="form-control" rows="5" asp-for="Description"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-success me-2">Güncelle</button>
+                        <a href="/About/Index" class="btn btn-light">İptal</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

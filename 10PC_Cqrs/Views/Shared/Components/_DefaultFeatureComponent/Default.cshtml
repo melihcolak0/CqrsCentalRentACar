@@ -1,0 +1,59 @@
+﻿@model List<GetFeatureQueryResult>
+
+<!-- Features Start -->
+<div class="container-fluid feature py-5">
+    <div class="container py-5">
+        <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+            <h1 class="display-5 text-capitalize mb-3">Cental <span class="text-primary">Özellikleri</span></h1>
+            <p class="mb-0">
+                Müşterilerimizin ihtiyaçlarına en uygun çözümleri sunmak için profesyonel ekibimizle hizmet veriyoruz. Yenilikçi yaklaşımımız ve kaliteli iş anlayışımız ile her projeye özel çözümler üretiyor, süreç boyunca şeffaf ve güvenilir bir iletişim sağlıyoruz.
+
+                Amacımız; beklentilerin ötesine geçerek sürdürülebilir, güvenilir ve uzun vadeli iş ortaklıkları kurmaktır.
+            </p>
+        </div>
+        <div class="row g-4 align-items-center">
+            <div class="col-xl-4">
+                <div class="row gy-4 gx-0">
+                    @foreach (var item in Model.Take(2))
+                    {
+                        <div class="col-12 wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <span class="@item.IconUrl"></span>
+                                </div>
+                                <div class="ms-4">
+                                    <h5 class="mb-3">@item.Title</h5>
+                                    <p class="mb-0">@item.Description</p>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+            <div class="col-lg-12 col-xl-4 wow fadeInUp" data-wow-delay="0.2s">
+                <img src="/Cental-1.0.0/img/features-img.png" class="img-fluid w-100" style="object-fit: cover;" alt="Img">
+            </div>
+            <div class="col-xl-4">
+                <div class="row gy-4 gx-0">
+                    @foreach (var item in Model.Skip(2).Take(2))
+                    {
+                        <div class="col-12 wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="feature-item justify-content-end">
+                                <div class="text-end me-4">
+                                    <h5 class="mb-3">@item.Title</h5>
+                                    <p class="mb-0">@item.Description</p>
+                                </div>
+                                <div class="feature-icon">
+                                    <span class="@item.IconUrl"></span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Features End -->
+

@@ -1,0 +1,43 @@
+﻿@model List<GetTestimonialQueryResult>
+
+<!-- Testimonial Start -->
+<div class="container-fluid testimonial pb-5">
+    <div class="container pb-5">
+        <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+            <h1 class="display-5 text-capitalize mb-3">Müşterilerimizin<span class="text-primary"> Görüşleri</span></h1>
+            <p class="mb-0">
+                Müşteri memnuniyeti ve güven, işimizin temel taşlarıdır. Cental olarak bugüne kadar hizmet verdiğimiz değerli müşterilerimizin geri bildirimleri ve başarı hikayeleri, kalitemizin ve güvenilirliğimizin en önemli göstergesidir.
+                Bu bölümde, bizi tercih eden müşterilerimizin yorumlarını ve deneyimlerini inceleyebilir, sunduğumuz hizmetin güvenilirliğini yakından görebilirsiniz.
+            </p>
+        </div>
+        <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.3s">
+            @foreach(var item in Model)
+            {
+                <div class="testimonial-item">
+                    <div class="testimonial-quote">
+                        <i class="fa fa-quote-right fa-2x"></i>
+                    </div>
+                    <div class="testimonial-inner p-4">
+                        <img src="@item.ImageUrl" class="img-fluid" alt="">
+                        <div class="ms-4">
+                            <h4>@item.NameSurname</h4>
+                            <p>@item.Profession</p>
+                            <div class="d-flex text-primary">
+                                @for(int i = 0; i < item.Star; i++)
+                                {
+                                    <i class="fas fa-star"></i>
+                                }                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border-top rounded-bottom p-4">
+                        <p class="mb-0">@item.Comment</p>
+                    </div>
+                </div>
+            }           
+            
+        </div>
+    </div>
+</div>
+<!-- Testimonial End -->
+

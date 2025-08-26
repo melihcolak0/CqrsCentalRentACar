@@ -1,0 +1,46 @@
+﻿@model GetTestimonialByIdQueryResult
+
+@{
+    ViewData["Title"] = "UpdateTestimonial";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="content-wrapper">
+    <div class="row">
+        <div class="col-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Referans Güncelleme</h4>
+                    <p class="card-description">
+                        Referanslar bölümünün güncelleme işlemlerini buradan gerçekleştirebilirsiniz.
+                    </p>
+                    <form class="forms-sample" method="post">
+                        <input type="hidden" asp-for="TestimonialId" />
+                        <div class="form-group">
+                            <label>Adı ve Soyadı</label>
+                            <input type="text" class="form-control" asp-for="NameSurname">
+                        </div>
+                        <div class="form-group">
+                            <label>Meslek</label>
+                            <input type="text" class="form-control" asp-for="Profession">
+                        </div>
+                        <div class="form-group">
+                            <label>Resim Url</label>
+                            <input type="text" class="form-control" asp-for="ImageUrl">
+                        </div>
+                        <div class="form-group">
+                            <label>Yıldız Sayısı</label>
+                            <input type="number" class="form-control" asp-for="Star">
+                        </div>
+                        <div class="form-group">
+                            <label>Yorum</label>
+                            <textarea class="form-control" rows="5" asp-for="Comment"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-success me-2">Güncelle</button>
+                        <a href="/Testimonial/Index" class="btn btn-light">İptal</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

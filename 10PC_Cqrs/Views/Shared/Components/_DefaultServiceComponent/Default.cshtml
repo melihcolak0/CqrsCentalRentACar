@@ -1,0 +1,29 @@
+﻿@model List<GetServiceQueryResult>
+
+<!-- Services Start -->
+<div class="container-fluid service py-5">
+    <div class="container py-5">
+        <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+            <h1 class="display-5 text-capitalize mb-3">Cental <span class="text-primary">Hizmetleri</span></h1>
+            <p class="mb-0">
+                Müşterilerimizin ihtiyaçlarına en uygun çözümleri sunmak için profesyonel ekibimizle hizmet veriyoruz. Yenilikçi yaklaşımımız ve kaliteli iş anlayışımız ile her projeye özel çözümler üretiyor, süreç boyunca şeffaf ve güvenilir bir iletişim sağlıyoruz.
+            </p>
+        </div>
+        <div class="row g-4">
+            @foreach(var item in Model)
+            {
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item p-4">
+                        <div class="service-icon mb-4">
+                            <i class="@item.IconUrl"></i>
+                        </div>
+                        <h5 class="mb-3">@item.Title</h5>
+                        <p class="mb-0">@item.Description</p>
+                    </div>
+                </div>
+            }         
+        </div>
+    </div>
+</div>
+<!-- Services End -->
+

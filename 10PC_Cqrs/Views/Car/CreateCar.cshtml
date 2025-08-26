@@ -1,0 +1,69 @@
+﻿@model CreateCarCommand
+
+@{
+    ViewData["Title"] = "CreateCar";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="content-wrapper">
+    <div class="row">
+        <div class="col-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Yeni Araba Ekleme</h4>
+                    <p class="card-description">
+                        Araba bölümünün ekleme işlemlerini buradan gerçekleştirebilirsiniz.
+                    </p>
+                    <form class="forms-sample" method="post">
+                        <div class="form-group">
+                            <label>Marka</label>
+                            <input type="text" class="form-control" asp-for="Brand">
+                        </div>
+                        <div class="form-group">
+                            <label>Model</label>
+                            <input type="text" class="form-control" asp-for="Model">
+                        </div>
+                        <div class="form-group">
+                            <label>Koltuk</label>
+                            <input type="number" class="form-control" asp-for="Seat">
+                        </div>
+                        <div class="form-group">
+                            <label>Vites</label>
+                            <input type="text" class="form-control" asp-for="Transmission">
+                        </div>
+                        <div class="form-group">
+                            <label>Yakıt</label>
+                            <input type="text" class="form-control" asp-for="Petrol">
+                        </div>
+                        <div class="form-group">
+                            <label>Yıl</label>
+                            <input type="number" class="form-control" asp-for="Year">
+                        </div>
+                        <div class="form-group">
+                            <label>Kasa</label>
+                            <input type="text" class="form-control" asp-for="Gear">
+                        </div>
+                        <div class="form-group">
+                            <label>Menzil</label>
+                            <input type="text" class="form-control" asp-for="Km">
+                        </div>
+                        <div class="form-group">
+                            <label>Değerlendirme</label>
+                            <input type="text" class="form-control" asp-for="Review">
+                        </div>
+                        <div class="form-group">
+                            <label>Resim Url</label>
+                            <input type="text" class="form-control" asp-for="ImageUrl">
+                        </div>
+                        <div class="form-group">
+                            <label>Fiyat/Gün</label>
+                            <input type="text" class="form-control" asp-for="PriceByDay">
+                        </div>
+                        <button type="submit" class="btn btn-success me-2">Ekle</button>
+                        <a href="/Car/Index" class="btn btn-light">İptal</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

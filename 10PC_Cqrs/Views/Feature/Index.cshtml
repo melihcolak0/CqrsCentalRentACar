@@ -1,0 +1,62 @@
+﻿@model List<GetFeatureQueryResult>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="content-wrapper">
+    <div class="row">
+        <div class="col-lg-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Özellikler Listesi</h4>
+                    <p class="card-description">
+                        Özellikler bölümünün ekleme, silme ve güncelleme işlemlerini buradan yapabilirsiniz.
+                    </p>
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th class="text-dark" style="font-style: italic; padding-right:40px;">#</th>
+                                    <th class="text-dark" style="font-style: italic;">İkon</th>
+                                    <th class="text-dark" style="font-style: italic;">Başlık</th>
+                                    <th class="text-dark" style="font-style: italic;">Açıklama</th>
+                                    <th class="text-dark" style="font-style: italic;">Sil</th>
+                                    <th class="text-dark" style="font-style: italic;">Güncelle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>@item.FeatureId</td>
+                                        <td>
+                                            <div class="feature-icon">
+                                                <span class="@item.IconUrl"></span>
+                                            </div>
+                                        </td>
+                                        <td>@item.Title</td>
+                                        <td>
+                                            @(string.IsNullOrEmpty(item.Description)
+                                                                                    ? ""
+                                                                                    : (item.Description.Length <= 50
+                                                                                    ? item.Description
+                                                                                    : item.Description.Substring(0, 50) + "..."))
+                                        </td>
+                                        <td><a href="/Feature/DeleteFeature/@item.FeatureId" class="btn btn-danger">Sil</a></td>
+                                        <td><a href="/Feature/UpdateFeature/@item.FeatureId" class="btn btn-warning">Güncelle</a></td>
+                                </tr>
+                                                                }
+                            </tbody>
+                        </table>
+                        <br />
+                        <a href="/Feature/CreateFeature" class="btn btn-primary">Yeni Özellik Ekle</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />

@@ -1,0 +1,39 @@
+﻿@model List<RapidAPIAirportsViewModel>
+
+@{
+    ViewData["Title"] = "ListAirports";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Türkiye Havalimanları</h2>
+
+<table class="table table-bordered mt-3">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Havalimanı</th>
+            <th>Kod</th>
+            <th>Şehir</th>
+            <th>Lat</th>
+            <th>Lng</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Airport_Name</td>
+                <td>@item.Airport_Code</td>
+                <td>@item.City</td>
+                <td>@item.Latitude</td>
+                <td>@item.Longitude</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<form method="post" asp-action="SaveAirportsToDb">
+    <button type="submit" class="btn btn-success">Tümünü Kaydet</button>
+</form>
+
