@@ -49,7 +49,7 @@ Projede genel anlamda 2 bölüm bulunmaktadır.<br>
 
 ### :triangular_flag_on_post: Ana Sayfa
 <div align="center">
-  <img src="https://github.com/melihcolak0/CqrsCentalRentACar/blob/bc3981f84807765f0a424dfc9dc6ebc0f6036e38/ss/screencapture-localhost-7100-Default-2025-08-25-21_39_22.png" alt="image alt">
+  <img src="https://github.com/melihcolak0/CqrsCentalRentACar/blob/d28c643325a2737151cc3c62637e55ecd0eafaac/ss2/screencapture-localhost-7100-Default-Index-2025-08-26-13_20_26.png" alt="image alt">
 </div>
 <div align="center">
   <img src="https://github.com/melihcolak0/CqrsCentalRentACar/blob/bc3981f84807765f0a424dfc9dc6ebc0f6036e38/ss/screencapture-localhost-7100-Default-ListAvailableCars-2025-08-26-13_23_08.png" alt="image alt">
