@@ -1,28 +1,45 @@
-# 🚀 ASP.NET Core 9.0 ve CQRS ile Cental Rent A Car Sitesi
-Bu repository, M&Y Yazılım Akademi bünyesinde yaptığım onuncu proje olan ASP.NET Core Web App ile ental Rent A Car Sitesi projesini içermektedir. Bu eğitimde bana yol gösteren Murat Yücedağ'a çok teşekkür ederim.
+# 🚗 ASP.NET Core 9.0 ve CQRS ile Cental Rent A Car Sitesi
+Bu repository, M&Y Yazılım Akademi bünyesinde yaptığım onuncu proje olan ASP.NET Core Web App ile Cental Rent A Car Sitesi projesini içermektedir. Bu eğitimde bana yol gösteren Murat Yücedağ'a çok teşekkür ederim.
 
-Bu proje, ASP.NET Core 9.0 ve CQRS (Command Query Responsibility Segregation) mimarisi kullanılarak geliştirilmiş bir araç kiralama destek ve öneri sistemidir. Tek katmanlı bir yapı tercih edilmiştir, fakat iş mantığı CQRS sayesinde sorgu (query) ve komut (command) işlemleri ayrıştırılarak düzenli bir yapı sağlanmıştır. MS SQL Server üzerinde ilişkili tablolarla beraber rezervasyonlar, araçlar, gibi çeşitli entity'ler için tablolar oluşturulmuş ve dinamik bir yapı sağlanmıştır. Tek katman olsa da Foler Structure'a uygun bir şekilde dosyalar oluşturulmuştur. 
+Bu proje, ASP.NET Core 9.0 ve CQRS (Command Query Responsibility Segregation) mimarisi kullanılarak geliştirilmiş modern bir araç kiralama destek ve öneri platformudur. Proje, tek katmanlı bir yapıda geliştirilmiş olsa da folder structure prensiplerine uygun bir dosya düzeni oluşturulmuş, böylece temiz kod, anlaşılabilirlik ve genişletilebilirlik sağlanmıştır.
+
+Arka planda MS SQL Server üzerinde ilişkisel tablolar tasarlanmış ve Araçlar, Rezervasyonlar, Kullanıcılar gibi temel entity’ler için dinamik veri yapıları oluşturulmuştur. Bu sayede proje sadece bir demo değil, gerçek bir sektörel uygulamaya dönüştürülebilecek nitelikte güçlü bir temel kazanmıştır.
+
+---
 
 ### 🔹 Ana Özellikler
-1. ViewComponent Yapısı
-- Projede, farklı kısımlar için ViewComponent’ler kullanılmıştır.
-- Böylece tekrarlanan UI parçaları (ör. araç önerileri, yakıt fiyatları, chatbot alanı) yeniden kullanılabilir hale getirilmiştir.
+1️⃣ ViewComponent Yapısı
+- Proje içerisinde tekrar eden UI parçaları (araç önerileri, yakıt fiyatları, chatbot alanı vb.) ViewComponent kullanılarak geliştirildi.
+- Bu sayede yeniden kullanılabilirlik sağlandı ve bakım kolaylaştırıldı.
 
-2. Yapay Zekâ ile Çeviri (Hugging Face – Helsinki NPL)
-- Kullanıcılar, Türkçe metinleri İngilizceye veya İngilizce metinleri Türkçeye çevirebilmektedir.
-- Hugging Face’in Helsinki NLP modeli kullanılarak gerçek zamanlı dil çevirisi yapılır.
+2️⃣ Yapay Zekâ ile Çeviri (Hugging Face – Helsinki NLP)
+- Kullanıcılar, Türkçe ↔ İngilizce çift yönlü otomatik çeviri yapabilmektedir.
+- Hugging Face’in Helsinki NLP modeli entegre edilerek gerçek zamanlı çeviri desteği sağlandı.
 
-3. RapidAPI Entegrasyonları
-- Yakıt Fiyatları (Türkiye) → Kullanıcılar farklı şehirlerdeki benzin, motorin, LPG fiyatlarını öğrenebilir. Ana Sayfa'daki maliyet hesabında ve Admin Paneli'ndeki Dashboard'da kullanılır.
-- Havalimanları (Türkiye’deki) → Türkiye’deki tüm havalimanlarının listesi çekilerek ana sayfada listelenir ve kullanıcıya sunulur.
-- Havalimanları Arası Mesafe Hesaplama → Ana Sayfa'da seçilen iki havalimanı arasındaki uçuş mesafesi hesaplanır ve kullanıcıya sunulur.
-- Chatbot → Müşteri'nin Bize Ulaşın bölümünden gönderdiği mesajları cevaplayan ve mail üzerinden cevap veren bir yapay zekâ destekli chatbot eklenmiştir.
+3️⃣ RapidAPI Entegrasyonları
+- ⛽ Yakıt Fiyatları (Türkiye) → Kullanıcılar farklı şehirlerdeki benzin, motorin ve LPG fiyatlarını görüntüleyebilir. Bu özellik:
+Ana sayfadaki maliyet hesaplama modülünde
+Admin panelindeki Dashboard ekranında kullanıldı.
+- ✈️ Havalimanları Listesi (Türkiye) → Tüm havalimanları dinamik olarak çekilip ana sayfada listelendi.
+- 📏 Havalimanları Arası Mesafe Hesaplama → Ana sayfada seçilen iki havalimanı arasındaki mesafe hesaplanarak kullanıcıya sunuldu.
+- 🤖 Chatbot (Bize Ulaşın) → Müşterinin iletişim formundan gönderdiği mesajlar AI destekli chatbot tarafından işleniyor ve otomatik mail yanıtı oluşturuluyor.
 
-4. Araç Öneri Asistanı
-- Kullanıcı, tek bir soru sorarak (örn: “4 kişilik bir aile için uygun araç önerir misin?”) öneri alabilir.
-- Asistan, ihtiyacı analiz eder ve mantıklı araç önerileri sunar.
+4️⃣ Araç Öneri Asistanı
+- Kullanıcılar, tek bir soru sorarak (ör. “4 kişilik aile için uygun araç önerir misin?”) kişiselleştirilmiş araç tavsiyesi alabiliyor.
+- Asistan, kullanıcı ihtiyacını analiz ederek SUV, sedan, MPV veya ekonomik sınıf gibi uygun alternatifler öneriyor.
+
+---
+
+### 🎯 Projenin Amacı
+Bu projeyi geliştirirken hedefim, ASP.NET Core ve CQRS mimarisi kullanarak modern, sürdürülebilir ve sektörel ihtiyaçlara uygun bir veri paneli geliştirme konusunda deneyim kazanmaktı.
+- 🧩 CQRS yapısıyla okuma (query) ve yazma (command) işlemlerini ayırarak kodun okunabilirliğini ve yönetilebilirliğini artırdım.
+- 📊 Gerçek API verileri (yakıt fiyatları, havalimanları, mesafe hesaplama) ile dinamik veri entegrasyonu sağladım.
+- 🤖 Hugging Face ve RapidAPI chatbot servisleriyle AI destekli kullanıcı deneyimi geliştirdim.<br>
+Projenin bazı eksikleri olsa da, bu süreçte edindiğim bilgi ve deneyimler sayesinde endüstriyel projelere daha hazırlıklı hale geldim.
 
 Bu projeyi geliştirirken amacım, ASP.NET Core ve CQRS teknolojileriyle modern bir veri paneli geliştirme konusunda kendimi ilerletmek ve sektörel projelere hazır hale gelmekti. Bu sebeple projenin eksikleri olabilir.
+
+---
 
 ### 🚀 Kullandığım Teknolojiler
 - 💻 ASP.NET Core 9.0 → Projenin backend kısmı, modern .NET Core mimarisiyle geliştirildi.
@@ -30,13 +47,13 @@ Bu projeyi geliştirirken amacım, ASP.NET Core ve CQRS teknolojileriyle modern 
 - 📐 Tek Katmanlı Yapı → Tek katman üzerinde klasörler ile ayrılmış dosya düzeni sağlandı.
 - 🗄️ MS SQL Server → Entity'ler ve İlişkili Tablolar MS SQL Server üzerinde düzenlendi.
 - 🖼 ViewComponent → Tekrarlayan UI parçalarını yönetmek için kullanıldı.
-- 🎨 HTML5, CSS3, JavaScript, Bootstrap
+- 🎨 HTML5, CSS3, JavaScript, Bootstrap → Arayüz tasarımı.
 - 🌍 Hugging Face – Helsinki NLP → Türkçe ↔ İngilizce otomatik çeviri için kullanıldı.
 - 🛢 RapidAPI Entegrasyonları:
 - ⛽ Yakıt Fiyatları API → Türkiye’deki benzin, motorin ve LPG fiyatları.
 - ✈️ Havalimanları API → Türkiye’deki havalimanlarının listelenmesi.
 - 📏 Havalimanları Arası Mesafe API → İki havalimanı arasındaki mesafeyi hesaplama.
-- 🤖 Chatbot API (Mesaja Karşılık Mail Oluşturma) → Müşterilerin sorularını cevaplayan basit yapay zekâ destekli sohbet botu.
+- 🤖 Chatbot API (Mesaj Yanıtı) → Müşterilerin sorularını cevaplayan basit yapay zekâ destekli sohbet botu.
 - 🚗 Chatbot API (Araç Öneri Asistanı) → Müşterilere araç önerileri yapan araç öneri asistanı.
 
 Projede genel anlamda 2 bölüm bulunmaktadır.<br>
